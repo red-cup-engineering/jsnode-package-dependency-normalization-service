@@ -8,3 +8,11 @@
 <!-- 561-group-standards:badges:end -->
 
 Pure normalization of dependency edges in one npm package manifest.
+
+`normalizeJsnodePackageDependencies` returns the manifest with each dependency named by its provider's package name and stated as a compatible range:
+
+- A `workspace:`, `file:` or `link:` dependency becomes `^VERSION` of its provider's published registry release. A provider with no published release, integrity and tarball is refused.
+- An exact version (`1.2.3`, `0.2.12-dev.140`) becomes `^1.2.3`, `^0.2.12-dev.140`.
+- A specification that already states a range, a dist-tag, an alias or another source is left as written.
+
+A manifest states which releases a package is compatible with. The exact release and its integrity are recorded once, in the lockfile of whatever is deployed. Exact versions in manifests make every consumer install its own copy of a shared provider.

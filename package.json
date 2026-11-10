@@ -1,6 +1,6 @@
 {
   "name": "@red-cup-engineering/jsnode-package-dependency-normalization-service",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "type": "module",
   "description": "Pure normalization of dependency edges in one npm package manifest.",
