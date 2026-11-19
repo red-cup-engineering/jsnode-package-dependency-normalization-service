@@ -1,0 +1,30 @@
+{
+  "name": "@red-cup-engineering/jsnode-package-dependency-normalization-service",
+  "version": "0.2.3-dev.0",
+  "private": false,
+  "type": "module",
+  "description": "Pure normalization of dependency edges in one npm package manifest.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/jsnode-package-dependency-normalization-service.git"
+  },
+  "exports": "./src/normalize-jsnode-package-dependencies.mjs",
+  "scripts": {
+    "check": "check-package-syntax",
+    "verify": "npm run check"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@red-cup-engineering/jsnode-package-engineering-services-section": "^0.6.2"
+  },
+  "files": [
+    "src"
+  ],
+  "license": "MIT",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
+  }
+}
